@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <p>Version {{ version }}</p>
+    <p>Version {% raw %}{{ version }}{% endraw %}</p>
     <p>© 2020 {{ cookiecutter.author_name }}</p>
   </footer>
 </template>
