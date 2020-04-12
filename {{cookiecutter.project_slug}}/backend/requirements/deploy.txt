@@ -1,0 +1,4 @@
+-r common.txt
+
+boto3==1.12.17
+sendgrid-django==4.2.0

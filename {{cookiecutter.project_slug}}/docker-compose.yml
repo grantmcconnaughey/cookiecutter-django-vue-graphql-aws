@@ -1,0 +1,56 @@
+version: "3.3"
+
+volumes:
+  {{cookiecutter.project_slug}}_data: {}
+  node_modules:
+
+services:
+  backend:
+    build:
+      context: ./backend
+    depends_on:
+      - postgres
+    volumes:
+      - ./backend:/app
+    command: /start.sh
+    entrypoint: /entrypoint.sh
+    restart: on-failure
+    env_file: .env
+
+  frontend:
+    build:
+      context: ./frontend
+    command: npm run serve
+    volumes:
+      - ./.env:/app/.env:ro
+      - ./frontend:/app
+      - node_modules:/app/node_modules
+    restart: on-failure
+
+  postgres:
+    image: postgres:10-alpine
+    ports:
+      - "5432:5432"
+    volumes:
+      - {{cookiecutter.project_slug}}_data:/var/lib/postgresql/data
+    env_file: .env
+
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - "8025:8025"
+    logging:
+      driver: none
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "8000:80"
+    depends_on:
+      - backend
+    volumes:
+      - ./backend/media/:/media/
+      - ./backend/staticfiles/:/staticfiles/
+      - ./nginx/dev.conf:/etc/nginx/nginx.conf:ro
+    logging:
+      driver: none

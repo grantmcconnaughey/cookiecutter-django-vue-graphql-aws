@@ -1,0 +1,33 @@
+{
+  "prod": {
+    "app_function": "config.wsgi.application",
+    "aws_region": "us-east-1",
+    "certificate_arn": "",
+    "cors": true,
+    "domain": "api.{{cookiecutter.domain_name}}",
+    "django_settings": "config.settings",
+    "exclude": [],
+    "environment_variables": {
+      "ALLOWED_HOSTS": "*",
+      "AWS_STORAGE_BUCKET_NAME": "CHANGEME-storage-bucket-name",
+      "WEBSITE_URL": "https://www.{{cookiecutter.domain_name}}",
+      "ROOT_DOMAIN": "{{cookiecutter.domain_name}}",
+      "DJANGO_SETTINGS_MODULE": "config.settings",
+      "SENTRY_DSN": ""
+    },
+    "keep_warm": false,
+    "memory_size": 1024,
+    "project_name": "{{cookiecutter.project_name}}",
+    "remote_env": "s3://prod.{{cookiecutter.domain_name}}/env.json",
+    "runtime": "python3.7",
+    "s3_bucket": "prod.{{cookiecutter.domain_name}}",
+    "tags": {
+      "app": "{{cookiecutter.project_slug}}"
+    },
+    "timeout_seconds": 30,
+    "vpc_config": {
+      "SubnetIds": [],
+      "SecurityGroupIds": []
+    }
+  }
+}
