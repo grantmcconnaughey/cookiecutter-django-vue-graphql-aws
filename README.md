@@ -34,7 +34,7 @@ First, get `cookiecutter`:
 
 Now run it against this repo:
 
-    $ cookiecutter gh:grantmcconnaughey/django-vue-graphql-cookiecutter
+    $ cookiecutter gh:grantmcconnaughey/cookiecutter-django-vue-graphql-aws
 
 You'll be prompted for some values. Provide them, then a project
 will be created for you.

@@ -1,7 +1,7 @@
 # {{cookiecutter.project_name}}
 
-<a href="https://github.com/grantmcconnaughey/django-vue-graphql-cookiecutter">
-    <img src="https://img.shields.io/badge/built%20with-Django%20Vue%20GraphQL%20Cookiecutter-blue.svg" />
+<a href="https://github.com/grantmcconnaughey/cookiecutter-django-vue-graphql-aws">
+    <img src="https://img.shields.io/badge/built%20with-Django%20Vue%20GraphQL%20AWS%20Cookiecutter-blue.svg" />
 </a>
 
 ## Development
