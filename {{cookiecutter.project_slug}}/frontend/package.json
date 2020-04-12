@@ -1,6 +1,6 @@
 {
   "name": "{{cookiecutter.project_slug}}-frontend",
-  "version": "0.1",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "serve": "npm i && vue-cli-service serve",
