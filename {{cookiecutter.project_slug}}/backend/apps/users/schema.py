@@ -106,6 +106,7 @@ class ResetPassword(graphene.Mutation):
     """ Mutation for requesting a password reset email """
 
     success = graphene.Boolean()
+    errors = graphene.List(graphene.String)
 
     class Arguments:
         email = graphene.String(required=True)
