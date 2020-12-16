@@ -38,7 +38,7 @@
     "vue-cli-plugin-apollo": "^0.16.4",
     "sass-loader": "^7.1.0",
     "@sentry/cli": "1.51.1",
-    "vue-template-compiler": "^2.5.17"
+    "vue-template-compiler": "2.6.11"
   },
   "eslintConfig": {
     "root": true,
