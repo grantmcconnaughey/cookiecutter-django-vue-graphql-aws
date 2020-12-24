@@ -1,16 +1,15 @@
 certifi==2019.11.28
-Django==2.2.13
+Django==2.2.16
 django-cors-headers==3.2.1
 django-environ==0.4.5
 django-extensions==2.2.8
 django-graphql-jwt==0.3.0
 django-storages==1.9.1
 graphene==2.1.8
-graphene-django==2.8.2
+graphene-django==2.13.0
 # psycopg2-binary==2.8.4
-pytz==2019.3
+pytz==2020.4
 requests==2.23.0
-sentry-sdk==0.14.2
-stripe==2.43.0
+sentry-sdk==0.19.5
 Werkzeug==0.16.0
 zappa==0.50.0
