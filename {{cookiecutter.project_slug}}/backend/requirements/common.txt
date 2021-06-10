@@ -1,5 +1,5 @@
 certifi==2019.11.28
-Django==2.2.22
+Django==2.2.24
 django-cors-headers==3.2.1
 django-environ==0.4.5
 django-extensions==2.2.8
